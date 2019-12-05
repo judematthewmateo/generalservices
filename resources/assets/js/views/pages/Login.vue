@@ -55,21 +55,32 @@
                     <div class="card-body text-center">
                   <h2>Sign up</h2>
                   <p>Create your account to enjoy the benefits of this system.</p>
-                  <button type="button" class="btn btn-primary active mt-3">Register Now!</button>
+                  <button type="button" class="btn btn-primary active mt-3" @click="showModalRegister=true">Register Now!</button>
                    </div>
                 </div>
             </div>
-           
+    
        </div>
           </div> 
         </div>
   
     </section>
+  
 </body>
+
+
 </template>
 
 <script>
 export default {
-  name: 'Login'
+  name: 'Login',
+
+   data() {
+    return {
+   
+
+    }
+   }
+
 }
 </script>

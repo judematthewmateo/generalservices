@@ -1,7 +1,7 @@
 <template>
-  <footer class="app-footer">
-    <a href="http://coreui.io">CoreUI</a> &copy; 2017 creativeLabs.
-    <span class="float-right">Powered by <a href="http://coreui.io">CoreUI</a> and <a href=-"https://laravel.com">Laravel 5.6</a></span>
+  <footer class="app-footer" style="text-align: right;">
+    <a href="http://coreui.io">BOGART</a> &copy; All right reserve.
+   
   </footer>
 </template>
 <script>

@@ -4,15 +4,7 @@
       <div class="col-sm-6 col-lg-3">
         <b-card class="bg-primary" :no-block="true">
           <div class="card-body pb-0">
-            <b-dropdown class="float-right" variant="transparent p-0" right>
-              <template slot="button-content">
-                <i class="icon-settings"></i>
-              </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-            </b-dropdown>
+           
             <h4 class="mb-0">9.823</h4>
             <p>Members online</p>
           </div>
@@ -22,15 +14,7 @@
       <div class="col-sm-6 col-lg-3">
         <b-card class="bg-info" :no-block="true">
           <div class="card-body pb-0">
-            <b-dropdown class="float-right" variant="transparent p-0" right>
-              <template slot="button-content">
-                <i class="icon-settings"></i>
-              </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-            </b-dropdown>
+            
             <h4 class="mb-0">9.823</h4>
             <p>Members online</p>
           </div>
@@ -40,15 +24,7 @@
       <div class="col-sm-6 col-lg-3">
         <b-card class="bg-warning" :no-block="true">
           <div class="card-body pb-0">
-            <b-dropdown class="float-right" variant="transparent p-0" right>
-              <template slot="button-content">
-                <i class="icon-settings"></i>
-              </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-            </b-dropdown>
+            
             <h4 class="mb-0">9.823</h4>
             <p>Members online</p>
           </div>
@@ -58,15 +34,7 @@
       <div class="col-sm-6 col-lg-3">
         <b-card class="bg-danger" :no-block="true">
           <div class="card-body pb-0">
-            <b-dropdown class="float-right" variant="transparent p-0" right>
-              <template slot="button-content">
-                <i class="icon-settings"></i>
-              </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-            </b-dropdown>
+           
             <h4 class="mb-0">9.823</h4>
             <p>Members online</p>
           </div>
@@ -80,7 +48,7 @@
         <div class="col-sm-5">
           <h4 class="card-title mb-0">Traffic</h4>
           <div class="small text-muted">November 2016</div>
-        </div><!--/.col-->
+        </div>
         <div class="col-sm-7 hidden-sm-down">
           <b-button type="button" variant="primary" class="float-right"><i class="icon-cloud-download"></i></b-button>
           <b-button-toolbar class="float-right" aria-label="Toolbar with button groups">
@@ -90,8 +58,8 @@
               <b-button variant="outline-secondary">Year</b-button>
             </b-button-group>
           </b-button-toolbar>
-        </div><!--/.col-->
-      </div><!--/.row-->
+        </div>
+      </div>
       <main-chart-example class="chart-wrapper" style="height:300px;margin-top:40px;" height="300"></main-chart-example>
       <div slot="footer">
         
@@ -124,80 +92,7 @@
         </ul>
       </div>
     </b-card>
-    <div class="row">
-      <div class="col-sm-6 col-lg-3">
-        <div class="social-box facebook">
-          <i class="fa fa-facebook"></i>
-          <div class="chart-wrapper">
-            <social-box-chart-example :data="[65, 59, 84, 84, 51, 55, 40]" height="90"/>
-          </div>
-          <ul>
-            <li>
-              <strong>89k</strong>
-              <span>friends</span>
-            </li>
-            <li>
-              <strong>459</strong>
-              <span>feeds</span>
-            </li>
-          </ul>
-        </div><!--/.social-box-->
-      </div><!--/.col-->
-      <div class="col-sm-6 col-lg-3">
-        <div class="social-box twitter">
-          <i class="fa fa-twitter"></i>
-          <div class="chart-wrapper">
-            <social-box-chart-example :data="[1, 13, 9, 17, 34, 41, 38]" height="90"/>
-          </div>
-          <ul>
-            <li>
-              <strong>973k</strong>
-              <span>followers</span>
-            </li>
-            <li>
-              <strong>1.792</strong>
-              <span>tweets</span>
-            </li>
-          </ul>
-        </div><!--/.social-box-->
-      </div><!--/.col-->
-      <div class="col-sm-6 col-lg-3">
-        <div class="social-box linkedin">
-          <i class="fa fa-linkedin"></i>
-          <div class="chart-wrapper">
-            <social-box-chart-example :data="[78, 81, 80, 45, 34, 12, 40]" height="90"/>
-          </div>
-          <ul>
-            <li>
-              <strong>500+</strong>
-              <span>contacts</span>
-            </li>
-            <li>
-              <strong>292</strong>
-              <span>feeds</span>
-            </li>
-          </ul>
-        </div><!--/.social-box-->
-      </div><!--/.col-->
-      <div class="col-sm-6 col-lg-3">
-        <div class="social-box google-plus">
-          <i class="fa fa-google-plus"></i>
-          <div class="chart-wrapper">
-            <social-box-chart-example :data="[35, 23, 56, 22, 97, 23, 64]" height="90"/>
-          </div>
-          <ul>
-            <li>
-              <strong>894</strong>
-              <span>followers</span>
-            </li>
-            <li>
-              <strong>92</strong>
-              <span>circles</span>
-            </li>
-          </ul>
-        </div><!--/.social-box-->
-      </div><!--/.col-->
-    </div><!--/.row-->
+    
     <div class="row">
       <div class="col-md-12">
         <b-card header="Traffic &amp; Sales">
