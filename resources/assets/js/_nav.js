@@ -6,8 +6,8 @@ export default {
       icon: 'icon-speedometer',
     },
     {
+    
       name: 'Accounts',
-      url: '/account',
       icon: 'icon-people',
       children: [
         {
@@ -30,7 +30,19 @@ export default {
           url: '/account/maintenance',
           icon: 'icon-key'
         },
-
+      
+    
+      ]
+    },
+    {
+        name: 'Client Navigation',
+        icon: 'icon-people',
+        children: [
+          {
+            name: 'IT Support',
+            url: '/account/add',
+            icon: 'icon-screen-desktop'
+          },  
 
 
 
