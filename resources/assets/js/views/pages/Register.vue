@@ -63,25 +63,26 @@ input[type="number"]::-webkit-outer-spin-button {
                       placeholder="OLFU - XXXX-XXXX-XXXX"
                       hover
                       title="Auto Generate"
+                      
                     />
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-addon">#</span>
                     <!-- <input type="number" class="form-control" placeholder="ID NO."> -->
-                    <input type="number" class="form-control" placeholder="ID NO." />
+                    <input type="number" class="form-control" placeholder="ID NO." v-model="login.id_no" />
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-addon">
                       <i class="icon-user"></i>
                     </span>
-                    <input type="text" class="form-control" placeholder="First Name" />
+                    <input type="text" class="form-control" placeholder="First Name" v-model="login.firstname"/>
                   </div>
 
                   <div class="input-group mb-3">
                     <span class="input-group-addon">
                       <i class="icon-user"></i>
                     </span>
-                    <input type="text" class="form-control" placeholder="Last Name" />
+                    <input type="text" class="form-control" placeholder="Last Name" v-model="login.lastname"/>
                   </div>
 
                   <div class="input-group mb-3" style="justify-content: center">
@@ -99,7 +100,7 @@ input[type="number"]::-webkit-outer-spin-button {
                     <span class="input-group-addon">
                       <i class="icon-phone"></i>
                     </span>
-                    <input type="number" class="form-control" placeholder="Contact No." />
+                    <input type="number" class="form-control" placeholder="Contact No." v-model="login.contact"/>
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-addon">
@@ -122,25 +123,25 @@ input[type="number"]::-webkit-outer-spin-button {
                     <span class="input-group-addon">
                       <i class="icon-user"></i>
                     </span>
-                    <input type="text" class="form-control" placeholder="Username" />
+                    <input type="text" class="form-control" placeholder="Username" v-model="login.username" />
                   </div>
 
                   <div class="input-group mb-3">
                     <span class="input-group-addon">
                       <i class="icon-lock"></i>
                     </span>
-                    <input type="password" class="form-control" placeholder="Password" />
+                    <input type="password" class="form-control" placeholder="Password"  v-model="login.password"/>
                   </div>
 
                   <div class="input-group mb-3">
                     <span class="input-group-addon">
                       <i class="icon-lock"></i>
                     </span>
-                    <input type="password" class="form-control" placeholder="Repeat password" />
+                    <input type="password" class="form-control" placeholder="Repeat password" v-model="login.password_confirmation" />
                   </div>
                 </div>
 
-                <button type="button" class="btn btn-block btn-success">Create Account</button>
+                <button type="button" class="btn btn-block btn-success" @click="register()" >Create Account</button>
               </div>
             </div>
           </div>
@@ -152,6 +153,50 @@ input[type="number"]::-webkit-outer-spin-button {
 
 <script>
 export default {
-  name: "Register"
-};
+  name: "Register",
+   data(){
+    return{
+      login: {
+        username: null,
+        password: null,
+        password_confirmation: null,
+        success: null,
+        firstname: null,
+        lastname: null,
+        middlename: null,
+        contact: null,
+        gender: null,
+        department: null,
+        id_no: null,
+      }
+    }
+  },
+methods: {
+    register(){
+      
+      this.$http.post('register', { 
+                 
+                    id_no: this.login.id_no,
+                    username: this.login.username,
+                    password: this.login.password,
+                    firstname: this.login.firstname,
+                    lastname: this.login.lastname,
+                    middlename: this.login.middlename,
+                    contact: this.login.contact,
+                    gender: this.login.firstname,
+                    department: this.login.department,
+                    
+                }).then(response => {
+                 
+                    // this.$store.commit('loginUser')
+                    // this.$store.commit('user', response.data.user.original)
+                    // localStorage.setItem('token', response.data.access_token)
+                   //  this.$router.push({ name: 'Dashboard' })
+       }).catch(err => {
+            this.login.success = false
+       });
+    }
+  }
+}
+
 </script>

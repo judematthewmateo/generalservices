@@ -13,12 +13,12 @@
   background-repeat: no-repeat;
   background-position: center;
 
-
 }
 </style>
 <template>
 <!-- style="background-image: url(images/login/login.jpg); background-position: center; background-repeat: no-repeat;background-size:contain;" -->
 <body class="body">
+  <notifications group="notification" />
   <section class="sec" style="background-image: url(images/login/login.jpg);">
   <div class="app flex-row align-items-center">
     <div class="container">
@@ -30,8 +30,9 @@
 
                 <div class="col-6"> 
                 <h1>Login</h1>
-                 <b-form @submit.prevent="authLogin()" @input="login.success = null">
+                
                 <p >Sign In to your account</p>
+                <b-form @submit.prevent="authLogin()" @input="login.success = null">
                 <div class="input-group mb-3">
                   <span class="input-group-addon"><i class="icon-user"></i></span>
                 <b-form-input
@@ -106,6 +107,7 @@ export default {
   },
   methods: {
     authLogin(){
+
       this.login.is_saving = true
       this.$http.post('api/auth/login', { 
                     username: this.login.username,
@@ -135,7 +137,10 @@ export default {
       });
     }
   },
- 
+   mounted(){
+    this.focusElement('username')
+  }
+
 }
 </script>
 

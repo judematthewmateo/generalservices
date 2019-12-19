@@ -30,11 +30,14 @@ import Register from '@/views/pages/Register'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'hash', // Demo is living in GitHub.io, so required!
   linkActiveClass: 'open active',
   scrollBehavior: () => ({ y: 0 }),
   routes: [
+
+
+
     {
       path: '/',
       redirect: '/dashboard',
@@ -154,4 +157,24 @@ export default new Router({
       ]
     }
   ]
+})
+export default router
+router.beforeEach((to, from, next) => {
+
+    
+
+  // check if the route requires authentication and user is not logged in
+  if (to.matched.some(route => route.meta.requiresAuth) && !store.state.isLoggedIn) {
+    // redirect to login page
+    next({ name: 'Login' })
+    return
+  }
+
+// if logged in redirect to dashboard
+  if(to.path === '/login' && store.state.isLoggedIn) {
+      next({name: from.name})
+      return
+  }
+
+next()
 })
