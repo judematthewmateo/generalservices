@@ -26,6 +26,11 @@ import router from './router'
 import FormMixin from './mixins/FormMixin'
 import axios from 'axios'
 import Notifications from 'vue-notification'
+import NProgress from 'nprogress';
+import 'vue-awesome/icons/flag'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
+import store from './store'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'nprogress/nprogress.css'
@@ -38,7 +43,7 @@ import cSwitch from './components/Switch'
 Vue.use(Notifications)
 Vue.use(DatePicker)
 
-
+Vue.component('icon', Icon)
 Vue.component('LineExample', LineExample)
 Vue.component('BarExample', BarExample)
 Vue.component('cSwitch', cSwitch)
@@ -49,8 +54,9 @@ const axiosConfig = {
   timeout: 30000
 }
 
-
+Vue.component('icon', Icon)
 Vue.component('App', require('./App.vue'))
+Vue.component('select2', require('./select2/select2'))
 Vue.component('vue-autonumeric', require('vue-autonumeric'))
 window.$ = window.jQuery = require('jquery')
 Vue.use(BootstrapVue)
@@ -76,7 +82,7 @@ Vue.mixin(FormMixin)
 new Vue({
   el: '#app',
   router,
- 
+  store,
   template: '<App/>',
   components: {
     App

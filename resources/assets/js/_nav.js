@@ -3,148 +3,124 @@ export default {
     {
       name: 'Dashboard',
       url: '/dashboard',
-      icon: 'icon-speedometer',
+      icon: 'icon-speedometer'
     },
     {
-    
-      name: 'Accounts',
-      icon: 'icon-people',
-      children: [
+      name: 'References',
+      url: '/references',
+      icon: 'icon-book-open',
+      children:[
         {
-          name: 'IT Support',
-          url: '/account/itsupport',
-          icon: 'icon-screen-desktop'
+          name: 'Categories',
+          url: '/references/categories',
+          icon: 'icon-list'
         },
         {
-          name: 'Engineering',
-          url: '/account/engineering',
-          icon: 'icon-pencil'
+          name: 'Departments',
+          url: '/references/departments',
+          icon: 'icon-list'
         },
         {
-          name: 'AV Technician',
-          url: '/account/avtech',
-          icon: 'icon-camrecorder'
+          name: 'Units',
+          url: '/references/units',
+          icon: 'icon-list'
         },
         {
-          name: 'Maintenance',
-          url: '/account/maintenance',
-          icon: 'icon-key'
+          name: 'Card types',
+          url: '/references/cardtypes',
+          icon: 'icon-list'
         },
-      
-    
+        {
+          name: 'Check types',
+          url: '/references/checktypes',
+          icon: 'icon-list'
+        },
+        {
+          name: 'GC types',
+          url: '/references/gctypes',
+          icon: 'icon-list'
+        },
+        {
+          name: 'Menus',
+          url: '/references/menus',
+          icon: 'icon-list'
+        },
+        // {
+        //   name: 'Inventory Types',
+        //   url: '/references/inventorytypes',
+        //   icon: 'icon-list'
+        // },
+        {
+          name: 'Suppliers',
+          url: '/references/suppliers',
+          icon: 'icon-list'
+        },
+        {
+        name: 'Discounts',
+        url: '/references/discounttypes',
+        icon: 'icon-list'
+        },  
+        {
+        name: 'Products',
+        url: '/references/products',
+        icon: 'icon-list'
+        },
       ]
     },
-    {
-        name: 'Client Navigation',
-        icon: 'icon-people',
-        children: [
-          {
-            name: 'IT Support',
-            url: '/account/add',
-            icon: 'icon-screen-desktop'
-          },  
-
-
-
-      ]
-    }
-  ]
-}
-  //       {
-  //         name: 'Social Buttons',
-  //         url: '/components/social-buttons',
-  //         icon: 'icon-puzzle'
-  //       },
-  //       {
-  //         name: 'Cards',
-  //         url: '/components/cards',
-  //         icon: 'icon-puzzle'
-  //       },
-  //       {
-  //         name: 'Forms',
-  //         url: '/components/forms',
-  //         icon: 'icon-puzzle'
-  //       },
-  //       {
-  //         name: 'Modals',
-  //         url: '/components/modals',
-  //         icon: 'icon-puzzle'
-  //       },
-  //       {
-  //         name: 'Switches',
-  //         url: '/components/switches',
-  //         icon: 'icon-puzzle'
-  //       },
-  //       {
-  //         name: 'Tables',
-  //         url: '/components/tables',
-  //         icon: 'icon-puzzle'
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     name: 'Icons',
-  //     url: '/icons',
-  //     icon: 'icon-star',
-  //     children: [
-  //       {
-  //         name: 'Font Awesome',
-  //         url: '/icons/font-awesome',
-  //         icon: 'icon-star'
-  //       },
-  //       {
-  //         name: 'Simple Line Icons',
-  //         url: '/icons/simple-line-icons',
-  //         icon: 'icon-star'
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     name: 'Widgets',
-  //     url: '/widgets',
-  //     icon: 'icon-calculator',
-  //     badge: {
-  //       variant: 'danger',
-  //       text: 'NEW'
-  //     }
-  //   },
-  //   {
-  //     name: 'Charts',
-  //     url: '/charts',
-  //     icon: 'icon-pie-chart'
-  //   },
-  //   {
-  //     divider: true
-  //   },
-  //   {
-  //     title: true,
-  //     name: 'Extras'
-  //   },
-  //   {
-  //     name: 'Pages',
-  //     url: '/pages',
-  //     icon: 'icon-star',
-  //     children: [
-  //       {
-  //         name: 'Login',
-  //         url: '/pages/login',
-  //         icon: 'icon-star'
-  //       },
-  //       {
-  //         name: 'Register',
-  //         url: '/pages/register',
-  //         icon: 'icon-star'
-  //       },
-  //       {
-  //         name: 'Error 404',
-  //         url: '/pages/404',
-  //         icon: 'icon-star'
-  //       },
-  //       {
-  //         name: 'Error 500',
-  //         url: '/pages/500',
-  //         icon: 'icon-star'
-  //       }
-  //     ]
-  //   }
+    
   
+        {
+          name: 'Inventory',
+          url: '/inventory',
+          icon: 'icon-book-open',
+          children:[
+            {
+              name: 'Purchase Order List',
+              url: '/inventory/purchasemains',
+              icon: 'icon-list'
+            },
+            {
+              name: 'Receiving List',
+              url: '/inventory/receivingmains',
+              icon: 'icon-list'
+            },
+            {
+              name: 'Issuance List',
+              url: '/inventory/issuance',
+              icon: 'icon-list'
+            },
+            {
+              name: 'Adjustment List',
+              url: '/inventory/adjustmentmains',
+              icon: 'icon-list'
+            },
+            
+         ]
+            }
+  ]
+        }
+
+            // {
+            //   name: 'Accounts',
+            //   url: '/accounts',
+            //   icon: 'icon-wrench',
+            //   children:[
+            // {
+            //   name: 'Users',
+            //   url: '/accounts/users',
+              
+            //   icon: 'icon-user'
+            // },
+            // {
+            //   name: 'User Group',
+            //   url: '/accounts/user_groups',
+            //   icon: 'icon-people'
+            // },
+            // {
+            //   name: 'Company Settings',
+            //   url: '/accounts/company_settings',
+            //   icon: 'icon-settings'
+            // }
+     
+     // ]
+//}

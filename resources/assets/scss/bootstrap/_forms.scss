@@ -8,7 +8,7 @@
   display: block;
   width: 100%;
   // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  // height: $input-height;
+  height: $input-height;
   padding: $input-btn-padding-y $input-btn-padding-x;
   font-size: $font-size-base;
   line-height: $input-btn-line-height;
@@ -59,7 +59,11 @@
     opacity: 1;
   }
 }
-
+.select2-container--bootstrap4 .select2-selection--single{
+  padding: $input-btn-padding-y $input-btn-padding-x;
+  line-height: $input-btn-line-height;
+  height: $input-height;
+}
 select.form-control {
   &:not([size]):not([multiple]) {
     height: $input-height;
@@ -266,7 +270,7 @@ select.form-control-lg {
 .invalid-feedback {
   display: none;
   margin-top: .25rem;
-  font-size: .875rem;
+  font-size: .69rem;
   color: $form-feedback-invalid-color;
 }
 

@@ -48,6 +48,7 @@ export default {
   @import "~select2/src/scss/core.scss";
   @import "~bootstrap-vue/dist/bootstrap-vue.css";
   @import '~bootstrap/scss/bootstrap.scss';
+  @import "~select2-bootstrap4-theme/src/select2-bootstrap4.scss";
 </style>
 <style lang="scss">
   // Import Main styles for this application

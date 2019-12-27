@@ -107,7 +107,6 @@ export default {
   },
   methods: {
     authLogin(){
-
       this.login.is_saving = true
       this.$http.post('api/auth/login', { 
                     username: this.login.username,
@@ -126,6 +125,7 @@ export default {
                       this.$router.push({ name: 'Dashboard' })
                     }.bind(this), 1000)
                     this.login.is_saving = false
+                    
       }).catch(err => {
             this.$notify({
               type: 'error',
@@ -137,10 +137,8 @@ export default {
       });
     }
   },
-   mounted(){
+  mounted(){
     this.focusElement('username')
   }
-
 }
 </script>
-

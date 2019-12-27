@@ -1,11 +1,10 @@
 <template>
-  <footer class="app-footer" style="text-align: right;">
-    <a href="http://coreui.io">BOGART</a> &copy; All right reserve.
-   
+  <footer class="app-footer">
+    <a href="#">JDEV</a> &copy; 2018.
   </footer>
 </template>
 <script>
 export default {
-  name: 'footer'
+  name: 'c-footer'
 }
 </script>
